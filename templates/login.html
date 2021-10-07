@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form action="/loginuser">
+
+    <input type="text"name="email">
+    <label for="email">Enter Account Email Address</label>
+    <br>
+    <br>
+    <input type="password"name="password">
+    <label for="password">Enter Account Password</label>
+
+    <br>
+    <br>
+    <input type="submit" name="submitlogin" id="submitlogin">
+
+
+</form>
+
+
+{% endblock %}

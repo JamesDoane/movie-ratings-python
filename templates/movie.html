@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+Title: {{movie.title}}
+<br>
+Release Date: {{ movie.release_date }}
+<br>
+IMDB URL: <a href="{{ movie.imdb_url }}">{{ movie.title }}</a>
+
+<ul>
+    {% for review in reviews %}
+    {% if review.movie_id == movie.movie_id %}
+    <li>
+        
+        User ID: {{ review.user_id }}
+        <br>
+        Score: {{ review.score }}
+       
+    </li>
+    {% endif %}
+    {% endfor %}
+
+</ul>
+
+{% endblock %}
